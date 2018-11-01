@@ -56,6 +56,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <arg name="rgb_info_topic"                default="rgb/camera_info" />
     <arg name="depth_topic"                   default="depth/depth_registered" />
     <arg name="depth_cam_info_topic"          default="depth/camera_info" />
+    <arg name="depth_stabilization"           default="0" />
 
     <node name="zed_wrapper_node" pkg="zed_wrapper" type="zed_wrapper_node" output="screen" required="true"><!-- launch-prefix="valgrind" -->
 
@@ -99,7 +100,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <param name="gain"                  value="100" />
         <param name="exposure"              value="100" />
         <param name="auto_exposure"         value="true" />
-        <param name="depth_stabilization"   value="1" />
+        <param name="depth_stabilization"   value="$(arg depth_stabilization)" />
         <param name="pose_smoothing"        value="false" />
         <param name="spatial_memory"        value="false" />
         <param name="floor_alignment"       value="false" />
