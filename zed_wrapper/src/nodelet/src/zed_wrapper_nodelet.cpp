@@ -1593,7 +1593,7 @@ namespace zed_wrapper {
                                       odomSubnumber > 0 || cloudSubnumber > 0 || depthSubnumber > 0 || pathSubNumber > 0);
 
                 if ((startTracking) && !mTrackingActivated) { // Start the tracking
-                    start_tracking();
+                    //start_tracking();
                 } else if (!mDepthStabilization && poseSubnumber == 0 && poseCovSubnumber == 0 &&
                            odomSubnumber == 0 &&
                            mTrackingActivated) { // Stop the tracking
@@ -1680,9 +1680,8 @@ namespace zed_wrapper {
 
                         startTracking = mDepthStabilization || poseSubnumber > 0 || poseCovSubnumber > 0 ||
                                         odomSubnumber > 0;
-
                         if (startTracking) {  // Start the tracking
-                            start_tracking();
+                            //start_tracking();
                         }
                     }
 
